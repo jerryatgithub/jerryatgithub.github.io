@@ -7,7 +7,6 @@
       const path = window.location.pathname.slice(1);
       const query = window.location.search;
       const hash = window.location.hash;
-
       sessionStorage.setItem(
         'redirect',
         JSON.stringify({
@@ -16,7 +15,7 @@
           hash: hash,
         })
       );
-      window.location.href = window.location.origin + '/';
+      window.location.href = window.location.origin + '/' + path + query + hash;
     </script>
   </head>
   <body>
