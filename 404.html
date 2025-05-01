@@ -15,7 +15,7 @@
           hash: hash,
         })
       );
-      window.location.href = window.location.origin + '/' + path + query + hash;
+      window.location.href = window.location.origin + (path ? '/' + path : '/');
     </script>
   </head>
   <body>
