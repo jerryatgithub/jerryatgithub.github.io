@@ -4,8 +4,19 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="/flai/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        const redirect = sessionStorage.getItem('redirect');
+        if (redirect) {
+          sessionStorage.removeItem('redirect');
+          const { path, query, hash } = JSON.parse(redirect);
+          const url = path + query + hash;
+          history.replaceState(null, null, '/flai/' + url);
+        }
+      })();
+    </script>
     <title>Welcome to FlAI</title>
-    <script type="module" crossorigin src="/flai/assets/index-DSIY0Ow5.js"></script>
+    <script type="module" crossorigin src="/flai/assets/index-DZdMuXif.js"></script>
     <link rel="stylesheet" crossorigin href="/flai/assets/index-D3_op4hv.css">
   </head>
   <body>
