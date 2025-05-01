@@ -4,14 +4,7 @@
     <meta charset="utf-8" />
     <title>重新導向中...</title>
     <script>
-      // 解析當前 URL 路徑
-      const segment = 1; // 如果您的應用部署在 /sub/，segment 應為 1
-
-      // 保存 URL 路徑信息到 sessionStorage
-      const path = window.location.pathname
-        .split('/')
-        .slice(segment + 1)
-        .join('/');
+      const path = window.location.pathname.slice(1);
       const query = window.location.search;
       const hash = window.location.hash;
 
@@ -23,9 +16,7 @@
           hash: hash,
         })
       );
-
-      // 重定向到主頁
-      window.location.href = window.location.origin + '/flai/';
+      window.location.href = window.location.origin + '/';
     </script>
   </head>
   <body>
